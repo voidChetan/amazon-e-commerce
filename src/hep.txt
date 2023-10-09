@@ -1,0 +1,4 @@
+ng build --base-href "https://voidChetan.github.io/amazon-e-commerce/"
+
+
+npx angular-cli-ghpages --dir=dist/amazom-e-commerce

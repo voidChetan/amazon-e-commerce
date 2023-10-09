@@ -1,0 +1,74 @@
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Billing Address -->
+            <div class="col-lg-8 col-md-12 mb-3">
+                <div class="card shadow">
+                    <div class="card-header bg-danger bg-opacity-25">
+                        <h4>Billing Address</h4>
+                    </div>
+                    <div class="card-body mb-5">
+                        <!-- form start -->
+                        <div class="row">
+                            
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" placeholder="City " [(ngModel)]="checkoutObj.DeliveryCity" class="form-control m-2">
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" placeholder="Pincode " [(ngModel)]="checkoutObj.DeliveryPinCode" class="form-control m-2">
+                            </div> 
+                            <div class="col-lg-6 col-md-6">
+                                <textarea placeholder="Address Line 1 " [(ngModel)]="checkoutObj.DeliveryAddress1" class="form-control m-2" rows="3"></textarea> 
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <textarea placeholder="Address Line  2" [(ngModel)]="checkoutObj.DeliveryAddress2" class="form-control m-2" rows="3"></textarea>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <textarea placeholder="Landmark" [(ngModel)]="checkoutObj.DeliveryLandMark" class="form-control m-2" rows="3"></textarea>
+                            </div> 
+                            
+                        </div>
+                        <!-- form end -->
+                    </div>
+                </div>
+            </div>
+            <!-- Your Order -->
+            <div class="col-lg-4 col-md-12">
+                <div class="card shadow ">
+                    <div class="card-header  bg-danger bg-opacity-25">
+                        <h4>Your Order</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="border-top d-flex mt-2" *ngFor="let item of cartItems">
+                            <img class="img-fluid h-25 w-25 p-2 " [src]="item.productImageUrl"
+                                alt="">
+                            <div class="ps-3">
+                                <p class="p-0 m-0 fw-semibold">{{item.productName |slice:0-10}}</p>
+                                <p class="p-0 m-0">${{item.productPrice}}</p>
+                                <p class="text-start mt-4"><button class="btn">QTY : <b>1</b> </button></p>
+                            </div>
+                        </div>
+                        
+                        <div class="border-top ">
+                            
+                           
+                            <div class=" border-top ">
+                                <div class="d-flex justify-content-between mt-2">
+                                    <p class="fw-semibold">Total :</p>
+                                    <p class="fw-semibold">$169.00</p>
+                                </div>
+                            </div>
+                            <div class="row border-top ">
+                                <div class="col-12 text-center mt-2">
+                                    <div class="w-100 bg-black">
+                                        <button class="btn text-white rounded-0 " (click)="placeOrder()">Place Order</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
