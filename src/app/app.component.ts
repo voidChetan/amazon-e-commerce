@@ -20,7 +20,7 @@ export class AppComponent {
   }
   loggedObj: any = {};
   cartItems: any[]= [];
-
+  loginModelClass: string = '';
   constructor(private productSrv: ProductService) {
     const localData = localStorage.getItem('amazon_user');
     if(localData != null) {
@@ -31,6 +31,11 @@ export class AppComponent {
     this.productSrv.cartUpdated.subscribe((res: boolean)=>{
       if(res) {
         this.getCartData(this.loggedObj.custId)
+      }
+    })
+    this.productSrv.showLogin.subscribe((res: boolean)=>{
+      if(res) {
+         this.loginModelClass = 'show';
       }
     })
   }
@@ -56,6 +61,7 @@ export class AppComponent {
       if(res.result) {
         alert("User Login Success");
         this.loggedObj = res.data;
+        this.loginModelClass = '';
         localStorage.setItem('amazon_user', JSON.stringify(res.data));
         this.getCartData(this.loggedObj.custId)
       } else {

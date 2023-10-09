@@ -8,6 +8,7 @@ import { Observable, Subject } from 'rxjs';
 export class ProductService {
 
   cartUpdated: Subject<boolean> = new Subject<boolean>();
+  showLogin: Subject<boolean> = new Subject<boolean>();
 
   constructor(private http: HttpClient) { }
 

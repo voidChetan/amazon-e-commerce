@@ -136,10 +136,10 @@
 <router-outlet></router-outlet>
 
 
-<div class="offcanvas offcanvas-end m-5" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end m-5" [ngClass]="loginModelClass" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
         <h5 id="offcanvasRightLabel">Sign In</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" (click)="loginModelClass= ''" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <section class="ftco-section">

@@ -46,21 +46,27 @@ export class ProductsComponent implements OnInit{
   }
 
   addtocart(producId: number) {
-    const obj = {
-      "CartId": 0,
-      "CustId": this.loggedObj.custId,
-      "ProductId": producId,
-      "Quantity": 1,
-      "AddedDate": new Date()
-    }
-    this.productSrv.addtoCart(obj).subscribe((res: any)=> {
-      if(res.result) {
-        alert("Product Added to Cart"); 
-        this.productSrv.cartUpdated.next(true);
-      } else {
-        alert(res.message)
+    if(this.loggedObj.custId == undefined) {
+      this.productSrv.showLogin.next(true);
+    } else {
+      const obj = {
+        "CartId": 0,
+        "CustId": this.loggedObj.custId,
+        "ProductId": producId,
+        "Quantity": 1,
+        "AddedDate": new Date()
       }
-    }) 
+      this.productSrv.addtoCart(obj).subscribe((res: any)=> {
+        if(res.result) {
+          alert("Product Added to Cart"); 
+          this.productSrv.cartUpdated.next(true);
+        } else {
+          alert(res.message)
+        }
+      }) 
+    }
+    debugger;
+    
   }
 
 
