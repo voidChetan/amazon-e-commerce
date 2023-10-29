@@ -1,27 +1,23 @@
-# AmazomECommerce
+# ZomatoV2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+eCommerce Application in Angular With API
 
-## Development server
+## Live server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Checkout Live Version to see Flow of Application [Live Version](https://voidchetan.github.io/amazon-e-commerce/products).
 
-## Code scaffolding
+## Technology Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+HTML, CSS, Angular, DOT NET API
 
-## Build
+## API USED
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+API Documentation [API](https://freeapi.miniprojectideas.com/index.html)
 
-## Running unit tests
+## Youtube Video
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Check my Youtube Video For Explanation  [youTube](https://youtu.be/pWx-Ot0ydLg).
 
-## Running end-to-end tests
+## Connect With me
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Connect with me for any queries [Linkedin](https://www.linkedin.com/in/chetan-jogi-a87148ba)
